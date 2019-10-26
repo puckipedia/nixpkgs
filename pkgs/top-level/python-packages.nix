@@ -461,6 +461,8 @@ in {
 
   bugseverywhere = callPackage ../applications/version-management/bugseverywhere {};
 
+  bunq_sdk = callPackage ../development/python-modules/bunq_sdk { };
+
   cachecontrol = callPackage ../development/python-modules/cachecontrol { };
 
   cachelib = callPackage ../development/python-modules/cachelib { };
