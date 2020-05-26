@@ -148,7 +148,7 @@ in
         # Provide kbd with additional packages.
         environment.etc.kbd.source = "${consoleEnv}/share";
 
-        boot.initrd.preLVMCommands = mkBefore ''
+        boot.initrd.preLogCommands = mkBefore ''
           kbd_mode ${if isUnicode then "-u" else "-a"} -C /dev/console
           printf "\033%%${if isUnicode then "G" else "@"}" >> /dev/console
           loadkmap < ${optimizedKeymap}
